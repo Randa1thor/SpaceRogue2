@@ -15,12 +15,14 @@ function loadDoc(url, data, callback) {
 
 }
 
+var dammitbobby=document.getElementById("db_connect").innerHTML
+
 
 function testPHP(responseText){
   if(responseText.includes("PHP Working")){
     document.getElementById("php_test").innerHTML="<div>Server Online</div><div>PHP Working</div>";
     loadDoc("tests/testdb.php","",testDB)
-
+    dammitbobby+=" Da";
   }else{
     document.getElementById("php_test").innerHTML="PHP Not Working check Server status";
   }
@@ -28,7 +30,7 @@ function testPHP(responseText){
 
 
 function testDB(responseText){
-  document.getElementById("db_connect").innerHTML=responseText;
+  document.getElementById("db_connect").innerHTML=dammitbobby+responseText+"by";
 }
 
 

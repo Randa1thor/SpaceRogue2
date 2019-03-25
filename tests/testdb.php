@@ -7,4 +7,6 @@ $stmt=$pdo->query($sql);
 
 echo json_encode($stmt->fetchAll());
 
+echo "Bob";
+
  ?>
