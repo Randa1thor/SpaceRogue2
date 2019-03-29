@@ -1,6 +1,6 @@
 <?php
 
-include_once("../database/databaseconnect.php");
+require_once("../database/databaseconnect.php");
 
 $sql="SELECT * FROM test";
 $stmt=$pdo->query($sql);
