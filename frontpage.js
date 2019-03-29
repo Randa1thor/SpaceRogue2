@@ -6,6 +6,8 @@ function loadDoc(url, data, callback) {
         console.log(this.responseText);
         callback(this.responseText);
 
+      }else{
+        callback("Failed: state: " + this.readyState+" <br /> status:"+this.status)
       }
     };
     xhttp.open("POST", "http://localhost/SpaceRogue2/" + url, true);
